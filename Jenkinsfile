@@ -48,21 +48,21 @@ pipeline {
             emailext (
                 subject: "${JOB_NAME} - Build # ${BUILD_NUMBER} - Successful",
                 body: "Build details: ${BUILD_URL}",
-                to: "youremail@example.com"
+                to: "mboikhutso1@gmail.com"
             )
         }
         failure {
             emailext (
                 subject: "${JOB_NAME} - Build # ${BUILD_NUMBER} - Failed",
                 body: "Build details: ${BUILD_URL}",
-                to: "youremail@example.com"
+                to: "mboikhutso1@gmail.com"
             )
         }
         unstable {
             emailext (
                 subject: "${JOB_NAME} - Build # ${BUILD_NUMBER} - Unstable",
                 body: "Build details: ${BUILD_URL}",
-                to: "youremail@example.com"
+                to: "mboikhutso1@gmail.com"
             )
         }
     }
