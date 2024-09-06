@@ -42,4 +42,28 @@ pipeline {
             }
         }
     }
+
+    post {
+        success {
+            emailext (
+                subject: "${JOB_NAME} - Build # ${BUILD_NUMBER} - Successful",
+                body: "Build details: ${BUILD_URL}",
+                to: "youremail@example.com"
+            )
+        }
+        failure {
+            emailext (
+                subject: "${JOB_NAME} - Build # ${BUILD_NUMBER} - Failed",
+                body: "Build details: ${BUILD_URL}",
+                to: "youremail@example.com"
+            )
+        }
+        unstable {
+            emailext (
+                subject: "${JOB_NAME} - Build # ${BUILD_NUMBER} - Unstable",
+                body: "Build details: ${BUILD_URL}",
+                to: "youremail@example.com"
+            )
+        }
+    }
 }
