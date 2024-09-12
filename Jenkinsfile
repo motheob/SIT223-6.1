@@ -49,6 +49,7 @@ pipeline {
                 subject: "${JOB_NAME} - Build # ${BUILD_NUMBER} - Successful",
                 body: "Build details: ${BUILD_URL}",
                 to: "motheoboikhutsopublic@gmail.com"
+                attachLog: true
             )
         }
         failure {
@@ -56,6 +57,7 @@ pipeline {
                 subject: "${JOB_NAME} - Build # ${BUILD_NUMBER} - Failed",
                 body: "Build details: ${BUILD_URL}",
                 to: "motheoboikhutsopublic@gmail.com"
+                attachLog: true
             )
         }
         unstable {
@@ -63,6 +65,7 @@ pipeline {
                 subject: "${JOB_NAME} - Build # ${BUILD_NUMBER} - Unstable",
                 body: "Build details: ${BUILD_URL}",
                 to: "motheoboikhutsopublic@gmail.com"
+                attachLog: true
             )
         }
     }
