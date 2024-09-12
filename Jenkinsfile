@@ -48,7 +48,7 @@ pipeline {
             emailext (
                 subject: "${JOB_NAME} - Build # ${BUILD_NUMBER} - Successful",
                 body: "Build details: ${BUILD_URL}",
-                to: "motheoboikhutsopublic@gmail.com"
+                to: "motheoboikhutsopublic@gmail.com",
                 attachLog: true
             )
         }
@@ -56,7 +56,7 @@ pipeline {
             emailext (
                 subject: "${JOB_NAME} - Build # ${BUILD_NUMBER} - Failed",
                 body: "Build details: ${BUILD_URL}",
-                to: "motheoboikhutsopublic@gmail.com"
+                to: "motheoboikhutsopublic@gmail.com",
                 attachLog: true
             )
         }
@@ -64,7 +64,7 @@ pipeline {
             emailext (
                 subject: "${JOB_NAME} - Build # ${BUILD_NUMBER} - Unstable",
                 body: "Build details: ${BUILD_URL}",
-                to: "motheoboikhutsopublic@gmail.com"
+                to: "motheoboikhutsopublic@gmail.com",
                 attachLog: true
             )
         }
